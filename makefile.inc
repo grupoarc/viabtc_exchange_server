@@ -18,4 +18,4 @@ $(TARGET) : $(OBJS)
 	$(CC) $(CFLAGS) -c -o $@ $< $(INCS)
 
 install :
-
+	cp $(TARGET) /usr/local/bin/

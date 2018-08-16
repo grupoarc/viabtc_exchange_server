@@ -260,12 +260,16 @@ market_t *market_create(struct market *conf)
 {
     if (!asset_exist(conf->stock) || !asset_exist(conf->money))
         return NULL;
+    log_fatal("asset exists");
     if (conf->stock_prec + conf->money_prec > asset_prec(conf->money))
         return NULL;
+    log_fatal("money precision OK");
     if (conf->stock_prec + conf->fee_prec > asset_prec(conf->stock))
         return NULL;
+    log_fatal("stock fee precision OK");
     if (conf->money_prec + conf->fee_prec > asset_prec(conf->money))
         return NULL;
+    log_fatal("money fee precision OK");
 
     market_t *m = malloc(sizeof(market_t));
     memset(m, 0, sizeof(market_t));

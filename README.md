@@ -50,6 +50,8 @@ See [requirements](https://github.com/viabtc/viabtc_exchange_server/wiki/require
 
 You MUST use the depends/hiredis to install the hiredis library. Or it may not be compatible.
 
+Ubuntu: apt install librdkafka-dev libev-dev libjansson-dev libhiredis-dev libmpdec-dev libmysqlclient-dev libcurl4-openssl-dev liblz4-dev
+
 **Compilation**
 
 Compile network and utils first. The rest all are independent.
